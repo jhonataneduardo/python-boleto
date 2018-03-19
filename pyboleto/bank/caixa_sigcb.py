@@ -23,8 +23,8 @@ class BoletoCaixaSigcb(BoletoData):
     @property
     def campo_livre(self):  # 24 digits
         content = "%6s%1s%3s%1s%3s%1s%9s" % (
-            self.conta_cedente.split('-')[0],
-            self.modulo11(self.conta_cedente.split('-')[0]),
+            self.convenio.split('-')[0],
+            self.modulo11(self.convenio.split('-')[0]),
             self.nosso_numero[2:5],
             self.nosso_numero[0:1],
             self.nosso_numero[5:8],
